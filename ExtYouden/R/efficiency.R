@@ -17,10 +17,10 @@ library(MASS)
 #' @return The relative efficiency of the given design
 #' @export
 #' @examples
-#' design = generate_eyd(6,5,5,1)
-#' efficiency(design,6,5,5,1, type = "D")
-
-
+#' \donttest{
+#'     design = generate_eyd(6,5,5,1)
+#'     efficiency(design,6,5,5,1, type = "D")
+#' }
 
 efficiency<-function(design,v,b,k,ctrl, type = "D"){
 

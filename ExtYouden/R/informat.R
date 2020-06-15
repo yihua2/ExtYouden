@@ -10,8 +10,11 @@
 #' @return The information matrix of the design
 #' @export
 #' @examples
-#' design = generate_eyd(6,5,5,1)
-#' informat(design,6,5,5,1)
+#' \donttest{
+#'    design = generate_eyd(6,5,5,1)
+#'    informat(design,6,5,5,1)
+#' }
+
 
 
 

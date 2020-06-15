@@ -26,6 +26,8 @@ The relative efficiency of the given design
 This script calculates the relative efficiency of design with given optimality criterion.
 }
 \examples{
-design = generate_eyd(6,5,5,1)
-efficiency(design,6,5,5,1, type = "D")
+\donttest{
+    design = generate_eyd(6,5,5,1)
+    efficiency(design,6,5,5,1, type = "D")
+}
 }

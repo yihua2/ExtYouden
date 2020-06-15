@@ -13,7 +13,9 @@ library(ibd)
 #' @importFrom data.table fsetdiff
 #' @export
 #' @examples
-#' generate_eyd(6,20,3,0)
+#' \donttest{
+#'    generate_eyd(6,20,3,0)
+#' }
 
 generate_eyd <- function(v,b,k, ctrl){
     #adding 1 control to each block
@@ -46,7 +48,7 @@ generate_eyd <- function(v,b,k, ctrl){
       D3 = D2
 
       for (j in 1:v0) {
-        #0 no control
+        # 0 no control
         # shuffle the indices of original blocks in which treatment j exist
         ind  = sample(which((
           apply(D3 == j, FUN = sum, MARGIN = 1) * c(1:(b + s)) > 0
@@ -113,18 +115,18 @@ generate_eyd <- function(v,b,k, ctrl){
         for (i in 1:(b + s)) {
           remain[i, ] = c(
             fsetdiff(data.table(D3[i, ]), data.table(new_fill[i, ]), all = TRUE),
-            recursive = T,
-            use.names = F
+            recursive = TRUE,
+            use.names = FALSE
           )
         }
 
-        if (j < k && sdr_exist(remain) == T) {
+        if (j < k && sdr_exist(remain) == TRUE) {
           #sdr_exist in code_bioassay
           j = j + 1
         }
         else if (j == k)
           break
-        else  if (j < k &&  sdr_exist(remain) == F) {
+        else  if (j < k &&  sdr_exist(remain) == FALSE) {
           j = 1
           new_fill = NULL
         }
@@ -233,17 +235,17 @@ generate_eyd <- function(v,b,k, ctrl){
         for (i in 1:(b + s)) {
           remain[i, ] = c(
             fsetdiff(data.table(D3[i, ]), data.table(new_fill[i, ]), all = TRUE),
-            recursive = T,
-            use.names = F
+            recursive = TRUE,
+            use.names = FALSE
           )
         }
 
-        if (j < k && sdr_exist(remain) == T) {
+        if (j < k && sdr_exist(remain) == TRUE) {
           j = j + 1
         }
         else if (j == k)
           break
-        else  if (j < k &&  sdr_exist(remain) == F) {
+        else  if (j < k &&  sdr_exist(remain) == FALSE) {
           j = 1
           new_fill = NULL
         }

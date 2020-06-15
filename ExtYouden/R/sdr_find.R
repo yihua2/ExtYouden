@@ -6,9 +6,11 @@
 #' @param block_by_row indication of orientation of the finding
 #' @return A Set of Distinct Representative of the matrix
 #' @export
+#' @examples
+#' X = matrix(c(0,1,2,2,0,1), byrow = TRUE,nrow = 2)
+#' sdr_find(X)
 
-
-sdr_find <- function(x, block_by_row = T){
+sdr_find <- function(x, block_by_row = TRUE){
   if(!block_by_row){
     x = t(x)
   }
@@ -61,7 +63,6 @@ sdr_find <- function(x, block_by_row = T){
       fill = NULL
 
       ct_update = counts
-      #print(paste("start over at i=", i))
       i = 1
     }
 

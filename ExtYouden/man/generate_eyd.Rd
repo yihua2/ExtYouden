@@ -22,5 +22,7 @@ An Extended Youden Design
 This script generates an Extended Youden design with ctrl controls required in each block, default 1
 }
 \examples{
-generate_eyd(6,20,3,0)
+\donttest{
+   generate_eyd(6,20,3,0)
+}
 }

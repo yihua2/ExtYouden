@@ -24,6 +24,8 @@ The information matrix of the design
 This script calculates the information matrix of the design
 }
 \examples{
-design = generate_eyd(6,5,5,1)
-informat(design,6,5,5,1)
+\donttest{
+   design = generate_eyd(6,5,5,1)
+   informat(design,6,5,5,1)
+}
 }

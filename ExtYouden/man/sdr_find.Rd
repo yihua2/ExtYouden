@@ -4,7 +4,7 @@
 \alias{sdr_find}
 \title{sdr_find}
 \usage{
-sdr_find(x, block_by_row = T)
+sdr_find(x, block_by_row = TRUE)
 }
 \arguments{
 \item{x}{matrix}
@@ -16,4 +16,8 @@ A Set of Distinct Representative of the matrix
 }
 \description{
 This script finds a Set of Distinct Representative of a matrix
+}
+\examples{
+X = matrix(c(0,1,2,2,0,1), byrow = TRUE,nrow = 2)
+sdr_find(X)
 }

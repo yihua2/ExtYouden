@@ -15,3 +15,7 @@ Shuffled matrixx
 \description{
 This script generates a randome shuffle within each row of a matrix
 }
+\examples{
+X = matrix(c(0,1,2,2,0,1), byrow = TRUE,nrow = 2)
+shuffle(X)
+}
