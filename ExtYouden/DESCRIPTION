@@ -4,11 +4,11 @@ Title: An Extended Youden Design in Biological Assays
 Version: 0.1.0
 Author: Yi Hua <huayi056@gmail.com>
 Maintainer: Yi Hua <huayi056@gmail.com>
-Description: Allows to
-    1. Generate an Extended Youden Design for a given Balanced Incomplete Block Design (BIBD);
-    2. Check the existence of Set of Distinct Representative (SDR) of a matrix;
-    3. Search for SDR of a matrix;
-    4. Calculate information matrix and design efficiency of an Extended Youden Design.
+Description: This package allows to implement the method of Extended Youden Design for bioassay experiments, which involves: 
+    * generating an Extended Youden Design for a given balanced incomplete block design (BIBD),
+    * checking the existence of Set of Distinct Representative (SDR) of a matrix,
+    * searching for SDR of a matrix, and
+    * calculating the information matrix and design efficiency of an Extended Youden Design.
 License: GPL-2
 Encoding: UTF-8
 Imports:
